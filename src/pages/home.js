@@ -13,8 +13,12 @@ class Home extends React.Component {
     return(
       <div style={{ textAlign:"center", display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column", maxWidth: "1000px" , height: "100vh"}}>
         <div style={{ display:"inline-flex", justifyContent: "center", alignItems: "center", flexDirection: "row"}}>
-          <h1 style={{ maxWidth: "500px", marginRight: "-40px", width: "500px", textAlign: "right"}}>{data.mainTitle}</h1>
-          <img src={mayadata} alt="mayadata" style={{ maxHeight: "40px", height: "100%", width: "100%"}} />
+          <div style={{ display:"flex", width: "400px"}}>
+           <h1>{data.mainTitle}</h1>
+          </div>
+          <div style={{ maxHeight: "40px", height: "100%", width: "100%"}}>
+           <img src={mayadata} alt="mayadata"  />
+          </div>
         </div>
         <img src={screen} alt="screen" style={{ maxWidth: "400px", width: "100%", height: "auto"}} />
         <h2>{data.title}</h2>
