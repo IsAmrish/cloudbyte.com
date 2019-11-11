@@ -2,11 +2,11 @@ import React from "react";
 
 class Timer extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = { time: {}, seconds: 20 };
- this.timer = 0;
- this.startTimer = this.startTimer.bind(this);
- this.countDown = this.countDown.bind(this);
+     super(props);
+     this.state = { time: {}, seconds: 20 , value: -1};
+     this.timer = 0;
+     this.startTimer = this.startTimer.bind(this);
+     this.countDown = this.countDown.bind(this);
   }
 
   secondsToTime(secs){
@@ -27,10 +27,16 @@ class Timer extends React.Component {
  }
 
  componentDidMount() {
+   window.addEventListener('popstate', (event) => {
+     if(event.persisted) {
+       window.location.reload();
+     }
+   })
    let timeLeftVar = this.secondsToTime(this.state.seconds);
    this.setState({ time: timeLeftVar });
    this.startTimer();
  }
+
 
  startTimer() {
    if (this.timer == 0 && this.state.seconds > 0) {
