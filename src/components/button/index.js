@@ -2,7 +2,7 @@ import React from "react"
 import { StyledPrimaryButton } from "./style"
 
 const handleButtonWrapping = (Component, props) => {
-  const { to, href, size, children } = props;
+  const { children } = props;
 
   const button = (
     <Component>

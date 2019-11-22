@@ -5,10 +5,6 @@ import Timer from "../components/timer"
 import screen from "../assets/images/screen.png"
 import mayadata from "../assets/images/mayadata-primary.svg"
 class Home extends React.Component {
-  constructor(props){
-    super(props);
-  }
-
   render(){
     return(
       <div style={{ textAlign:"center", display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column", maxWidth: "1000px" , height: "100vh"}}>
